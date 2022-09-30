@@ -1,0 +1,11 @@
+# This example uses YAML anchors which allows reuse of multiple keys
+# without having to repeat yourself.
+keys:
+  - &v60 age1g0epgg0ansvh7u58yurwa4845dwu34g6xeelfgstkjr87vjazdfqm0xqh0
+  - &kimchi age1dunj43quggcyhr8vn5djntk4wyzqhppk7cq5elnflpjgxm2y94mqz6qpd7
+creation_rules:
+  - path_regex: secrets_enc*.yaml$
+    key_groups:
+    - age:
+      - *v60
+      - *kimchi
