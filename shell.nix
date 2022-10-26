@@ -6,5 +6,6 @@ mkShell {
   buildInputs = [
     esphome
     sops
+    screen
   ];
 }
