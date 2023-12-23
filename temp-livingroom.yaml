@@ -36,6 +36,17 @@ sensor:
   - platform: aht10
     temperature:
       name: "Living Room Temperature"
+      filters:
+        - calibrate_linear:
+          - 0.0 -> 0.0
+          - 23.67 -> 19.9
     humidity:
       name: "Living Room Humidity"
+      filters:
+        - calibrate_linear:
+          - 0.0 -> 0.0
+          - 31.23 -> 43
+
     update_interval: 60s
+
+        
